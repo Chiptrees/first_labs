@@ -62,8 +62,17 @@ def get_variant(lab_number, key_word: str, len_numbers=None, min_value=-100, max
         qr_data3 = {'short_review': [lab_number, key_word, seed]}
         qr_data4 = {'QR': 'Nothing interesting, just another dict'}
 
-        path = 'dataset\\images\\train\\'
-        names = [dir_ for dir_ in os.listdir(path) if dir_.startswith('img_v2_')]
+        for path in [
+            'dataset/images/train/',
+            'first_lab/dataset/images/train/'
+        ]:
+            if os.path.exists(path):
+                break
+        else:
+            raise FileNotFoundError(
+                'Cannot find dataset'
+            )
+
         photos = [np.flip(cv2.imread(path + name), axis=2) for name in rng.choice(names, 3)]
 
         images = []
