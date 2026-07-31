@@ -64,7 +64,7 @@ def get_variant(lab_number, key_word: str, len_numbers=None, min_value=-100, max
 
         for path in [
             'dataset/images/train/',
-            'first_lab/dataset/images/train/'
+            'first_labs/dataset/images/train/'
         ]:
             if os.path.exists(path):
                 break
