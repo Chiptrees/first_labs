@@ -1,0 +1,29 @@
+# Ігнорувати все
+*
+
+# Дозволити переходити по папках
+!*/
+
+# Дозволити службові файли репозиторію
+!.gitignore
+!README.md
+
+# Дозволити бібліотеку
+!CV_library/
+!CV_library/**
+
+# Дозволити датасет
+!dataset/
+!dataset/**
+
+# Але все одно ігнорувати кеші
+CV_library/__pycache__/
+CV_library/**/*.pyc
+
+dataset/**/__pycache__/
+dataset/**/*.pyc
+
+# IDE та оточення
+.idea/
+.venv/
+``
