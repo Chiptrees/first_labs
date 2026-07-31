@@ -12,6 +12,9 @@
 !CV_library/
 !CV_library/**
 
+# Дозволити requirements
+!requirements.txt
+
 # Дозволити датасет
 !dataset/
 !dataset/**
