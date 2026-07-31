@@ -73,6 +73,7 @@ def get_variant(lab_number, key_word: str, len_numbers=None, min_value=-100, max
                 'Cannot find dataset'
             )
 
+        names = [dir_ for dir_ in os.listdir(path) if dir_.startswith('img_v2_')]
         photos = [np.flip(cv2.imread(path + name), axis=2) for name in rng.choice(names, 3)]
 
         images = []
